@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document Query App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Document Query App</h1>
+            <div class="columns">
+                <div class="column">
+                    <form id="uploadForm">
+                        <div class="file is-boxed">
+                            <label class="file-label">
+                                <input class="file-input" type="file" name="file" required>
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                        <i class="fas fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                        Choose a file...
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <button class="button is-primary mt-4" type="submit">Upload</button>
+                    </form>
+                </div>
+                <div class="column">
+                    <form id="queryForm">
+                        <div class="field">
+                            <label class="label">Query</label>
+                            <div class="control">
+                                <input class="input" type="text" name="query" placeholder="Enter your query" required>
+                            </div>
+                        </div>
+                        <input type="hidden" name="filename" id="filename">
+                        <button class="button is-primary" type="submit">Query</button>
+                    </form>
+                    <div id="result" class="mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
