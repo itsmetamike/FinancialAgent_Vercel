@@ -1,11 +1,11 @@
 const express = require('express');
 const multer = require('multer');
-const { TextLoader } = require('langchain/dist/document_loaders/text_loader');
-const { CharacterTextSplitter } = require('langchain/dist/text_splitter');
-const { OpenAIEmbeddings } = require('langchain/dist/embeddings/openai');
-const { FAISS } = require('langchain/dist/vectorstores/faiss');
-const { RetrievalQA } = require('langchain/dist/chains/retrieval_qa');
-const { OpenAI } = require('langchain/dist/llms/openai');
+const { TextLoader } = require('langchain/document_loaders');
+const { CharacterTextSplitter } = require('langchain/text_splitter');
+const { OpenAIEmbeddings } = require('langchain/embeddings');
+const { FAISS } = require('langchain/vectorstores');
+const { RetrievalQA } = require('langchain/chains');
+const { OpenAI } = require('langchain/llms');
 
 const app = express();
 const port = process.env.PORT || 3000;
