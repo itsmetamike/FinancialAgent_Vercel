@@ -12,7 +12,6 @@ $(document).ready(function() {
         contentType: false,
         success: function(response) {
           alert(response.message);
-          $('#filename').val(file.name);
         },
         error: function(xhr, status, error) {
           alert('Error: ' + error);
@@ -23,11 +22,10 @@ $(document).ready(function() {
     $('#queryForm').submit(function(e) {
       e.preventDefault();
       var query = $('input[name=query]').val();
-      var filename = $('#filename').val();
       $.ajax({
         url: '/query',
         type: 'POST',
-        data: JSON.stringify({ query: query, filename: filename }),
+        data: JSON.stringify({ query: query }),
         contentType: 'application/json',
         success: function(response) {
           $('#result').html('<p class="subtitle">Result:</p><p>' + response.result + '</p>');
